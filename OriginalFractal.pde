@@ -10,16 +10,15 @@ public void draw()
     increase+=10;
     if(increase>900)
     {
-        increase*=1.2;
+        increase*=1.01;
     }
 }
 public void fractal(int x, int y, int siz)
 {
     strokeWeight(0.5);
     stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
-    fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
     ellipse(x, y, siz, siz);
-    if(siz>10)
+    if(siz>30)
     {
         fractal(x-siz/3,y,siz/2);
         fractal(x,y,siz/4);
